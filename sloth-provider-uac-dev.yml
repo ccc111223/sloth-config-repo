@@ -11,12 +11,12 @@ sloth:
     limits[0]:
       moduleName: uac
       key: smsCode_mobile
-      count: 2
+      count: 1
       period: 60
     limits[1]:
       moduleName: uac
       key: index
-      count: 10
+      count: 3
       period: 60
       
   wechat:
