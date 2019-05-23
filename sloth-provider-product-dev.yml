@@ -1,0 +1,9 @@
+security:
+  oauth2:
+    client:
+      clientId: webApp
+      clientSecret: 123456
+      access-token-uri: http://localhost:9000/uac/oauth/token
+      user-authorization-uri: http://localhost:9000/uac/oauth/authorize
+    resource:
+      user-info-uri: http://localhost:9000/uac/user
