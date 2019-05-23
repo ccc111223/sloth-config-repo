@@ -19,10 +19,6 @@ zuul:
       id: sloth-provider-uac
       path: /uac/**
       service-id: sloth-provider-uac
-#     test:
-#       id: sloth-test
-#       path: /**
-#       service-id: sloth-test
   sensitive-headers:
   ratelimit:
     key-prefix: sloth-ratelimit
