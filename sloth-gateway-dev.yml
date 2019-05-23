@@ -44,7 +44,7 @@ ribbon:
 
 security:
   validate:
-    code: true
+    code: false
 
 ignore:
   clients:
