@@ -8,6 +8,11 @@ spring:
 sloth:
   system:
     domain: http://tcd4y3.natappfree.cc
+    limits[0]:
+      moduleName: uac
+      key: smsCode_mobile
+      count: 2
+      period: 60
   wechat:
     app-id: wxef700fec119c8dd6
     app-secret: 5672f99fcc51358b1dc5271530a1de3f
