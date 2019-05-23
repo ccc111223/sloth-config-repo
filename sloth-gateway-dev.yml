@@ -1,0 +1,55 @@
+zuul:
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 60000
+  routes:
+    complain:
+      id: sloth-provider-complaints
+      path: /complaint/**
+      service-id: sloth-provider-complaints
+    order:
+      id: sloth-provider-order
+      path: /order/**
+      service-id: sloth-provider-order
+    product:
+      id: sloth-provider-product
+      path: /product/**
+      service-id: sloth-provider-product
+    uac:
+      id: sloth-provider-uac
+      path: /uac/**
+      service-id: sloth-provider-uac
+    test:
+      id: sloth-test
+      path: /**
+      service-id: sloth-test
+  sensitive-headers:
+  ratelimit:
+    key-prefix: sloth-ratelimit
+    enabled: true
+    repository: redis
+    behind-proxy: false
+    default-policy:
+      limit: 300
+      quota: 1000
+      refresh-interval: 60
+      type: origin
+    policies:
+      sloth-provider-uac:
+        limit: 300
+        quota: 1000
+        refresh-interval: 60
+        type: origin
+
+
+ribbon:
+  ReadTimeout: 7000
+  SocketTimeout: 7000
+
+security:
+  validate:
+    code: true
+
+ignore:
+  clients:
+    - app
