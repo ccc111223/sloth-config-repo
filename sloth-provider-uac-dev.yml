@@ -1,0 +1,65 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sloth?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver  
+sloth:
+  system:
+    domain: http://tcd4y3.natappfree.cc
+  wechat:
+    app-id: wxef700fec119c8dd6
+    app-secret: 5672f99fcc51358b1dc5271530a1de3f
+    mch-id:
+    key:
+  security:
+    oauth2:
+      clients[0]:
+        clientId: webApp
+        clientSecret: $2a$10$cKRbR9IJktfmKmf/wShyo.5.J8IxO/7YVn8twuWFtvPgruAF8gtKq
+        accessTokenValidateSeconds: 3600
+        refreshTokenValiditySeconds: 86400
+        type: authorization_code,password,refresh_token
+        scope: "*"
+      clients[1]:
+        clientId: sloth_feign
+        clientSecret: $2a$10$cKRbR9IJktfmKmf/wShyo.5.J8IxO/7YVn8twuWFtvPgruAF8gtKq
+        accessTokenValidateSeconds: 3600
+        refreshTokenValiditySeconds: 86400
+        type: client_credentials,refresh_token
+        scope: "*"
+      clients[2]:
+        clientId: app
+        clientSecret: $2a$10$cKRbR9IJktfmKmf/wShyo.5.J8IxO/7YVn8twuWFtvPgruAF8gtKq
+        accessTokenValidateSeconds: 3600
+        refreshTokenValiditySeconds: 86400
+        type: password,refresh_token
+        scope: "*"
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.sloth.entity
+
+logging:
+  config: classpath:logback.xml
+  level:
+    org:
+      springframework:
+        web: info
+
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+ribbon:
+  ReadTimeout: 30000
+  ConnectTimeout: 60000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
