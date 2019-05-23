@@ -16,7 +16,7 @@ sloth:
     limits[1]:
       moduleName: uac
       key: index
-      count: 3
+      count: 5
       period: 60
       
   wechat:
