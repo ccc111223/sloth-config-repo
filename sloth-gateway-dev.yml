@@ -44,7 +44,7 @@ ribbon:
 
 security:
   validate:
-    code: true
+    code: false
     useRSA: false
     privateKey: MIIBVQIBADANBgkqhkiG9w0BAQEFAASCAT8wggE7AgEAAkEAkVA7lQrj912VGWruT7tZJR8lZiyUXSWjwmRoGtCay05jYkDsNfGPj36KTtCe0er/kTgpTvTSmXHW4Tk75BsCeQIDAQABAkByR8wkAeWZBAMfc0YqdGe+Vwldmo+v1cs9NSPeetJSMokfYhBYvnSe9n9sxvhMkCX9RFoZT5/h0Zh98Ihz7rOFAiEA2oTRrsYc88o93hLBnKpg2uOcYwdbgpaROd7TKXgjpA8CIQCqPPUYR7+aAA4un/OLwqOvdjXza7RtDjq6AjCiybTI9wIhAMhByFe/P3E7+o616bFFgxWWWg93AqoeimDaj/IFI8SJAiEApEN/Z7dLjQiCpsCWWwQrt1HECyahCR3S0srsLReeRs8CIChYgwdp6+rrW5JvVQWXOzBD+Xjj+qPfBYCd0gmIhDI0
 ignore:
