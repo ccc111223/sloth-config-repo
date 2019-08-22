@@ -18,7 +18,7 @@ sloth:
       clients[0]:
         clientId: webApp
         clientSecret: $2a$10$cKRbR9IJktfmKmf/wShyo.5.J8IxO/7YVn8twuWFtvPgruAF8gtKq
-        accessTokenValidateSeconds: 60
+        accessTokenValidateSeconds: 30
         refreshTokenValiditySeconds: 86400
         type: authorization_code,password,refresh_token
         scope: "*"
