@@ -29,22 +29,22 @@ sloth:
       clients[0]:
         clientId: webApp
         clientSecret: $2a$10$cKRbR9IJktfmKmf/wShyo.5.J8IxO/7YVn8twuWFtvPgruAF8gtKq
-        accessTokenValidateSeconds: 30
-        refreshTokenValiditySeconds: 86400
+        accessTokenValidateSeconds: 60
+        refreshTokenValiditySeconds: 1
         type: authorization_code,password,refresh_token
         scope: "*"
       clients[1]:
         clientId: sloth_feign
         clientSecret: $2a$10$cKRbR9IJktfmKmf/wShyo.5.J8IxO/7YVn8twuWFtvPgruAF8gtKq
-        accessTokenValidateSeconds: 3600
-        refreshTokenValiditySeconds: 86400
+        accessTokenValidateSeconds: 60
+        refreshTokenValiditySeconds: 1
         type: client_credentials,refresh_token
         scope: "*"
       clients[2]:
         clientId: app
         clientSecret: $2a$10$cKRbR9IJktfmKmf/wShyo.5.J8IxO/7YVn8twuWFtvPgruAF8gtKq
-        accessTokenValidateSeconds: 3600
-        refreshTokenValiditySeconds: 86400
+        accessTokenValidateSeconds: 60
+        refreshTokenValiditySeconds: 1
         type: password,refresh_token
         scope: "*"
 
